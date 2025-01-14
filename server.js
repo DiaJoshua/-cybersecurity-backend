@@ -3,6 +3,8 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const path = require('path')
+const Parser = require('rss-parser')
+const axios = require('axios')
 const errorHandler = require('./middleware/errorHandler')
 const cookieParser = require('cookie-parser')
 const corsOptions = require('./config/corsOptions')
@@ -14,30 +16,14 @@ const PORT = process.env.PORT || 5000
 connectDB()
 
 app.use(logger)
-
 app.use(cors(corsOptions))
-
 app.use(express.json())
-
 app.use(cookieParser())
-
 app.use('/', express.static(path.join(__dirname, 'public')))
-
 app.use('/', require('./routes/root'))
 app.use('/users', require('./routes/userRoutes'))
 
-app.all('*', (req, res) => {
-  res.status(404)
-  if (req.accepts('html')) {
-    res.sendFile(path.join(__dirname, 'views', '404.html'))
-  } else if (req.accepts('json')) {
-    res.json({ message: '404 Not Found'})
-  } else {
-    res.type('txt').send('404 Not Found')
-  }
-})
-
-app.use(errorHandler)
+const parser = new Parser()
 
 mongoose.connection.once('open', () => {
   console.log('Connected to MongoDB')
@@ -46,5 +32,49 @@ mongoose.connection.once('open', () => {
 
 mongoose.connection.on('error', err => {
   console.log(err)
-  // logEvents(`${err.no}: ${err.code}\t${err.syscall}\t{err.hostname}`, 'mongoErrLog.log')
 })
+
+app.get('/fetch-cybercrime-news', async (req, res) => {
+  try {
+    const apiKey = process.env.NEWS_API_KEY;
+    if (!apiKey) {
+      return res.status(500).json({ error: 'API key is missing.' });
+    }
+
+    const url = `https://newsapi.org/v2/everything?q=cybercrime+Philippines&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
+    const response = await axios.get(url);
+    
+    if (!response.data.articles || response.data.articles.length === 0) {
+      return res.status(404).json({ message: 'No news found for the specified query.' });
+    }
+
+    const articles = response.data.articles.map((article) => {
+      return {
+        title: article.title,
+        description: article.description || 'No description available',
+        url: article.url,
+        image: article.urlToImage || 'default-image.jpg',
+        publishedAt: article.publishedAt,
+      };
+    });
+
+    res.status(200).json(articles);
+  } catch (error) {
+    console.error('Error fetching news:', error.message);
+    res.status(500).json({ error: 'Failed to fetch news. Please try again later.' });
+  }
+});
+
+
+app.all('*', (req, res) => {
+  res.status(404)
+  if (req.accepts('html')) {
+    res.sendFile(path.join(__dirname, 'views', '404.html'))
+  } else if (req.accepts('json')) {
+    res.json({ message: '404 Not Found' })
+  } else {
+    res.type('txt').send('404 Not Found')
+  }
+})
+
+app.use(errorHandler)

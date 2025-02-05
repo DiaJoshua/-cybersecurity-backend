@@ -11,6 +11,7 @@ const corsOptions = require('./config/corsOptions')
 const connectDB = require('./config/dbConn')
 const mongoose = require('mongoose')
 const { logger, logEvents } = require('./middleware/logger')
+const cybercrimeRoutes = require("./routes/cybercrimeRoutes");
 const PORT = process.env.PORT || 5000
 
 connectDB()
@@ -21,7 +22,6 @@ app.use(express.json())
 app.use(cookieParser())
 app.use('/', express.static(path.join(__dirname, 'public')))
 app.use('/', require('./routes/root'))
-app.use('/users', require('./routes/userRoutes'))
 
 const parser = new Parser()
 
@@ -65,6 +65,8 @@ app.get('/fetch-cybercrime-news', async (req, res) => {
   }
 });
 
+// Route to fetch all cybercrime data
+app.use("/api", cybercrimeRoutes);
 
 app.all('*', (req, res) => {
   res.status(404)

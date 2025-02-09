@@ -41,7 +41,7 @@ app.get('/fetch-cybercrime-news', async (req, res) => {
       return res.status(500).json({ error: 'API key is missing.' });
     }
 
-    const url = `https://newsapi.org/v2/everything?q=cybercrime+Philippines&language=en&sortBy=publishedAt&apiKey=${process.env.NEWS_API_KEY}`;
+    const url = `https://newsapi.org/v2/everything?q=cybercrime+Philippines&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
     const response = await axios.get(url);
     
     if (!response.data.articles || response.data.articles.length === 0) {

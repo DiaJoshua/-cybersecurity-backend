@@ -68,7 +68,7 @@ app.get('/fetch-cybercrime-news', async (req, res) => {
 // Route to fetch all cybercrime data
 app.use("/api", cybercrimeRoutes);
 
-app.all('*', (req, res) => {
+app.use('*', (req, res) => {
   res.status(404)
   if (req.accepts('html')) {
     res.sendFile(path.join(__dirname, 'views', '404.html'))

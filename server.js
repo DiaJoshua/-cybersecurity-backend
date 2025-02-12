@@ -35,41 +35,35 @@ mongoose.connection.on('error', err => {
 })
 
 
-app.get('/fetch-cybercrime-news', async (req, res) => {
+app.get("/fetch-cybercrime-news", async (req, res) => {
   try {
-    const apiKey = process.env.NEWS_API_KEY;
-    console.log("Using API Key:", apiKey);
+      const apiKey = process.env.NEWS_API_KEY;
+      if (!apiKey) {
+          console.error("❌ Error: Missing API Key.");
+          return res.status(500).json({ error: "API key is missing." });
+      }
 
-    if (!apiKey) {
-      console.error("❌ Error: Missing API Key.");
-      return res.status(500).json({ error: 'API key is missing.' });
-    }
+      const url = `https://serpapi.com/search?engine=google_news&q=cybercrime+Philippines&api_key=${apiKey}`;
+      const response = await axios.get(url);
 
-    const url = `https://newsapi.org/v2/everything?q=cybercrime+Philippines&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
+      if (!response.data.news_results || response.data.news_results.length === 0) {
+          console.warn("⚠️ No articles found.");
+          return res.status(404).json({ message: "No news found for the specified query." });
+      }
 
-    const response = await axios.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
-      },
-    });
+      // Map the SerpAPI response to match frontend needs
+      const articles = response.data.news_results.map((article) => ({
+          title: article.title || "No Title",
+          description: article.snippet || "No description available",
+          url: article.link || "#",
+          image: article.thumbnail || "default-image.jpg",
+          publishedAt: article.date || "Unknown Date",
+      }));
 
-    if (!response.data.articles || response.data.articles.length === 0) {
-      console.warn("⚠️ No articles found.");
-      return res.status(404).json({ message: 'No news found for the specified query.' });
-    }
-
-    const articles = response.data.articles.map((article) => ({
-      title: article.title,
-      description: article.description || 'No description available',
-      url: article.url,
-      image: article.urlToImage || 'default-image.jpg',
-      publishedAt: article.publishedAt,
-    }));
-
-    res.status(200).json(articles);
+      res.status(200).json(articles);
   } catch (error) {
-    console.error("🔥 Error fetching news:", error.response?.status, error.response?.data || error.message);
-    res.status(500).json({ error: 'Failed to fetch news. See logs for details.' });
+      console.error("🔥 Error fetching news:", error.message);
+      res.status(500).json({ error: "Failed to fetch news. See logs for details." });
   }
 });
 

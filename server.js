@@ -53,8 +53,6 @@ app.get('/fetch-cybercrime-news', async (req, res) => {
       },
     });
 
-    console.log("✅ News API Response:", response.status, response.data);
-
     if (!response.data.articles || response.data.articles.length === 0) {
       console.warn("⚠️ No articles found.");
       return res.status(404).json({ message: 'No news found for the specified query.' });

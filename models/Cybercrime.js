@@ -8,6 +8,6 @@ const CybercrimeSchema = new mongoose.Schema({
   "NATURE OF CASES": String,
   "Brgy": mongoose.Schema.Types.Mixed, // Changed to Mixed to handle nested objects
   "TOTAL CASES PER CYBERCRIME": Number
-}, { collection: "cybercrime_stats" });
+});
 
-module.exports = mongoose.model("Cybercrime", CybercrimeSchema);
+module.exports = mongoose.model("District-3", CybercrimeSchema, "District-3");

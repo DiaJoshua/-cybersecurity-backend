@@ -43,7 +43,7 @@ app.get("/fetch-cybercrime-news", async (req, res) => {
           return res.status(500).json({ error: "API key is missing." });
       }
 
-      const url = `https://serpapi.com/search?engine=google_news&q=cybercrime+Philippines&api_key=${apiKey}`;
+      const url = `https://serpapi.com/search?engine=google_news&q=cybercrime+Philippines&api_key=${apiKey}&tbm=nws`;
       const response = await axios.get(url);
 
       if (!response.data.news_results || response.data.news_results.length === 0) {
@@ -53,13 +53,13 @@ app.get("/fetch-cybercrime-news", async (req, res) => {
 
       // Map the SerpAPI response to match frontend needs
       const articles = response.data.news_results.map((article) => ({
-          title: article.title || "No Title",
-          description: article.snippet || "No description available",
-          url: article.link || "#",
-          image: article.thumbnail || "default-image.jpg",
-          publishedAt: article.date || "Unknown Date",
-      }));
-
+        title: article.title || "No Title",
+        description: article.snippet || "No description available",
+        url: article.link || "#",
+        image: article.thumbnail && article.thumbnail.trim() !== "" ? article.thumbnail : "https://your-cdn.com/default-image.jpg",
+        publishedAt: article.date || "Unknown Date",
+    }));
+    
       res.status(200).json(articles);
   } catch (error) {
       console.error("🔥 Error fetching news:", error.message);

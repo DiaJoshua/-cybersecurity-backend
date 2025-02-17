@@ -52,13 +52,13 @@ app.get("/fetch-cybercrime-news", async (req, res) => {
 
       // Map the SerpAPI response to match frontend needs
       const articles = response.data.news_results.map((article) => ({
-        title: article.title || "No Title",
-        description: article.snippet || "No description available",
-        url: article.link || "#",
-        // image: article.thumbnail && article.thumbnail.trim() !== "" ? article.thumbnail : "https://your-cdn.com/default-image.jpg",
-        publishedAt: article.date || "Unknown Date",
-    }));
-    
+          title: article.title || "No Title",
+          // description: article.snippet || "No description available",
+          url: article.link || "#",
+          image: article.thumbnail && article.thumbnail.startsWith("http") ? article.thumbnail : null,
+          publishedAt: article.date || "Unknown Date",
+      }));
+
       res.status(200).json(articles);
   } catch (error) {
       console.error("🔥 Error fetching news:", error.message);

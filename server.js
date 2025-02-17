@@ -8,13 +8,13 @@ const axios = require('axios')
 const errorHandler = require('./middleware/errorHandler')
 const cookieParser = require('cookie-parser')
 const corsOptions = require('./config/corsOptions')
-const connectDB = require('./config/dbConn')
+const connectDB = require("./config/dbConn");
 const mongoose = require('mongoose')
 const { logger, logEvents } = require('./middleware/logger')
 const cybercrimeRoutes = require("./routes/cybercrimeRoutes");
 const PORT = process.env.PORT || 5000
 
-connectDB()
+connectDB();
 
 app.use(logger)
 app.use(cors(corsOptions))
@@ -26,7 +26,6 @@ app.use('/', require('./routes/root'))
 const parser = new Parser()
 
 mongoose.connection.once('open', () => {
-  console.log('Connected to MongoDB')
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 })
 
@@ -56,7 +55,7 @@ app.get("/fetch-cybercrime-news", async (req, res) => {
         title: article.title || "No Title",
         description: article.snippet || "No description available",
         url: article.link || "#",
-        image: article.thumbnail && article.thumbnail.trim() !== "" ? article.thumbnail : "https://your-cdn.com/default-image.jpg",
+        // image: article.thumbnail && article.thumbnail.trim() !== "" ? article.thumbnail : "https://your-cdn.com/default-image.jpg",
         publishedAt: article.date || "Unknown Date",
     }));
     
@@ -68,9 +67,9 @@ app.get("/fetch-cybercrime-news", async (req, res) => {
 });
 
 
-
 // Route to fetch all cybercrime data
 app.use("/api", cybercrimeRoutes);
+
 
 app.use('*', (req, res) => {
   res.status(404)

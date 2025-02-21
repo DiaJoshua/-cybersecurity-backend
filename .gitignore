@@ -1,3 +1,4 @@
 node_modules
 logs
 .env
+fine_tuned_gpt2_2

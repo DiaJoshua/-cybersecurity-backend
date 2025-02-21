@@ -7,5 +7,5 @@ const CybercrimeDistrictsSchema = new mongoose.Schema({
   district: { type: Number, required: true }
 });
 
-module.exports = mongoose.model("CybercrimeDistricts", CybercrimeDistrictsSchema);
+module.exports = mongoose.model("District-3", CybercrimeDistrictsSchema);
 module.exports.schema = CybercrimeDistrictsSchema; // Ensure schema export

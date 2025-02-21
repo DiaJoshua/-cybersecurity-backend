@@ -1,12 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const cybercrimeController = require("../controllers/CybercrimeDistrictsController");
-console.log(cybercrimeController);
-
-
 
 if (!cybercrimeController.getAllCases || !cybercrimeController.getCasesByDistrict) {
-  console.error("❌ Controller functions are not defined correctly. Check CybercrimeDistrictsController.js.");
+  console.error("❌ Controller functions are not defined correctly.");
 }
 
 router.get("/cases", cybercrimeController.getAllCases);

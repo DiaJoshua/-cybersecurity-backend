@@ -38,20 +38,35 @@ exports.getCasesByDistrict = async (req, res) => {
 
 exports.getAllCases = async (req, res) => {
   try {
-    const collections = ["District-3", "District-4", "District-5", "District-6"];
     let allCases = [];
 
-    for (const collectionName of collections) {
-      if (mongoose.connection.collections[collectionName]) {
-        const Model = mongoose.connection.model(collectionName, new mongoose.Schema({}, { strict: false }), collectionName);
+    console.log("✅ Connected to Database:", mongoose.connection.name);
+
+    // Fetch available collections dynamically
+    const collections = await mongoose.connection.db.listCollections().toArray();
+    const collectionNames = collections.map(col => col.name); // Extract collection names
+
+    console.log("Available collections:", collectionNames);
+
+    for (const collectionName of collectionNames) {
+      if (["District-3", "District-4", "District-5", "District-6"].includes(collectionName)) {
+        console.log("Processing collection:", collectionName);
+
+        const Model = mongoose.connection.models[collectionName] || 
+                      mongoose.model(collectionName, new mongoose.Schema({}, { strict: false }), collectionName);
+        
         const cases = await Model.find();
+        console.log(`Cases from ${collectionName}:`, cases.length);
+
         allCases = [...allCases, ...cases];
       }
     }
 
+    console.log("Total cases retrieved:", allCases.length);
     res.json(allCases);
   } catch (error) {
     console.error("❌ Error fetching all cases:", error);
     res.status(500).json({ error: "Server error while fetching all cases." });
   }
 };
+

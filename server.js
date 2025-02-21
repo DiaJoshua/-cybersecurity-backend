@@ -12,6 +12,7 @@ const connectDB = require("./config/dbConn");
 const mongoose = require('mongoose')
 const { logger, logEvents } = require('./middleware/logger')
 const cybercrimeRoutes = require("./routes/cybercrimeRoutes");
+// const cybercrimeTrendsRoutes = require("./routes/cybercrimeTrendsRoutes");
 const PORT = process.env.PORT || 5000
 
 connectDB();
@@ -69,6 +70,8 @@ app.get("/fetch-cybercrime-news", async (req, res) => {
 
 // Route to fetch all cybercrime data
 app.use("/api", cybercrimeRoutes);
+// app.use("/api", cybercrimeTrendsRoutes);
+
 
 
 app.use('*', (req, res) => {

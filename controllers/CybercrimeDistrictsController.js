@@ -5,8 +5,8 @@ exports.getCasesByDistrict = async (req, res) => {
     const { district } = req.params;
     const collectionName = `District-${district}`;
 
-    console.log("Available collections:", Object.keys(mongoose.connection.collections));
-    console.log(`Fetching data from collection: ${collectionName}`);
+    // console.log("Available collections:", Object.keys(mongoose.connection.collections));
+    // console.log(`Fetching data from collection: ${collectionName}`);
 
     // Instead of checking mongoose.connection.collections, we use listCollections()
     const collections = await mongoose.connection.db.listCollections().toArray();
@@ -22,7 +22,7 @@ exports.getCasesByDistrict = async (req, res) => {
     // Fetch all documents from the collection
     const cases = await Model.find();
 
-    console.log(`Cases found in ${collectionName}:`, cases);
+    // console.log(`Cases found in ${collectionName}:`, cases);
 
     if (!cases.length) {
       return res.status(404).json({ message: `No cases found for ${collectionName}` });
@@ -40,29 +40,29 @@ exports.getAllCases = async (req, res) => {
   try {
     let allCases = [];
 
-    console.log("✅ Connected to Database:", mongoose.connection.name);
+    // console.log("✅ Connected to Database:", mongoose.connection.name);
 
     // Fetch available collections dynamically
     const collections = await mongoose.connection.db.listCollections().toArray();
     const collectionNames = collections.map(col => col.name); // Extract collection names
 
-    console.log("Available collections:", collectionNames);
+    // console.log("Available collections:", collectionNames);
 
     for (const collectionName of collectionNames) {
       if (["District-3", "District-4", "District-5", "District-6"].includes(collectionName)) {
-        console.log("Processing collection:", collectionName);
+        // console.log("Processing collection:", collectionName);
 
         const Model = mongoose.connection.models[collectionName] || 
                       mongoose.model(collectionName, new mongoose.Schema({}, { strict: false }), collectionName);
         
         const cases = await Model.find();
-        console.log(`Cases from ${collectionName}:`, cases.length);
+        // console.log(`Cases from ${collectionName}:`, cases.length);
 
         allCases = [...allCases, ...cases];
       }
     }
 
-    console.log("Total cases retrieved:", allCases.length);
+    // console.log("Total cases retrieved:", allCases.length);
     res.json(allCases);
   } catch (error) {
     console.error("❌ Error fetching all cases:", error);

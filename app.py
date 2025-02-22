@@ -13,13 +13,14 @@ model = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 model.eval()
 
-# Load the rules-based dataset
+# Load the rules-based dataset from Server/Chatbot/chatbot_dataset.json
 with open("./Chatbot/chatbot_dataset.json", "r", encoding="utf-8") as file:
     rules_based_data = json.load(file)
 
 def get_rules_based_response(question):
     """Check if a predefined response exists for the given question."""
     lower_question = question.lower().strip()
+    # Loop through each key and return the answer if the question contains a keyword from the dataset.
     for key in rules_based_data.keys():
         if lower_question in key.lower():
             return rules_based_data[key]
@@ -46,16 +47,15 @@ def generate_answer(question, model, tokenizer, max_length=512):
 @app.route('/chat', methods=['POST'])
 def chat():
     user_message = request.json.get("message")
-
     if not user_message:
         return jsonify({"response": "Sorry, I didn't catch that. Please try again."})
 
-    # **Step 1: Check rules-based responses**
+    # Step 1: Check rules-based responses first
     rules_response = get_rules_based_response(user_message)
     if rules_response:
         return jsonify({"response": rules_response})
 
-    # **Step 2: If no match, use AI model**
+    # Step 2: Fallback to AI-generated response
     ai_response = generate_answer(user_message, model, tokenizer)
     return jsonify({"response": ai_response})
 

@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Understanding Cybercrime (General Knowledge)",
+      "questions": [
+        "What is cybercrime?",
+        "What are the most common types of cybercrime?",
+        "Why is cybercrime a growing concern in the Philippines?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Cyber Fraud & Financial Crimes (Online Scams & Fraudulent Activities)",
+      "questions": [
+        "What are the most common financial fraud schemes online?",
+        "How do cybercriminals steal money through digital banking?",
+        "What should I do if I’m a victim of an online scam?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cyber Attacks & Hacking (Unauthorized Access & Data Breaches)",
+      "questions": [
+        "What is hacking, and how do hackers gain access to systems?",
+        "What are the different types of cyberattacks?",
+        "How can businesses protect their systems from hackers?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Cyberbullying & Online Harassment (Digital Safety & Social Media Crimes)",
+      "questions": [
+        "What is cyberbullying, and how does it happen?",
+        "What are the legal consequences of cyberbullying in the Philippines?",
+        "How can victims of cyber harassment seek help?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Child Exploitation & Online Abuse (Cybercrimes Against Minors)",
+      "questions": [
+        "What is online child exploitation?",
+        "How do predators target children on the internet?",
+        "How can parents protect their children from online threats?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Cyber Espionage & Data Theft (Corporate & Government Cybercrime)",
+      "questions": [
+        "What is cyber espionage, and how does it impact national security?",
+        "How do cybercriminals steal sensitive company data?",
+        "What security measures can businesses take against cyber espionage?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Cybercrime Laws & Legal Actions (Philippine Cybercrime Regulations)",
+      "questions": [
+        "What are the cybercrime laws in the Philippines?",
+        "What are the penalties for committing cybercrimes in the country?",
+        "How can victims report cybercrime incidents to authorities?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Online Privacy & Identity Theft (Digital Security & Data Protection)",
+      "questions": [
+        "How do cybercriminals steal personal information online?",
+        "What should I do if my identity has been stolen?",
+        "How can I protect my personal data from hackers?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Cybercrime Prevention & Awareness (Digital Safety Practices)",
+      "questions": [
+        "What are the best practices to stay safe online?",
+        "How can businesses improve their cybersecurity?",
+        "What role does financial literacy play in preventing cybercrime?"
+      ]
+    }
+  ]
+}

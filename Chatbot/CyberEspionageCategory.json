@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Understanding Cyber Espionage (General Knowledge)",
+      "questions": [
+        "What is cyber espionage?",
+        "How does cyber espionage differ from traditional spying?",
+        "Why is cyber espionage a growing threat?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Methods Used in Cyber Espionage (Attack Techniques)",
+      "questions": [
+        "What are the common tactics used in cyber espionage?",
+        "How do cybercriminals use malware for espionage?",
+        "What role do phishing attacks play in cyber espionage?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cyber Espionage Targets (Who is at Risk?)",
+      "questions": [
+        "Which industries are most targeted by cyber espionage?",
+        "How do governments become victims of cyber espionage?",
+        "Are small businesses also at risk of cyber espionage?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Notable Cyber Espionage Cases (Real-World Examples)",
+      "questions": [
+        "What are some of the biggest cyber espionage incidents in history?",
+        "How has cyber espionage affected international relations?",
+        "What are some examples of cyber espionage attacks in the Philippines?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Cyber Espionage and National Security (Geopolitical Impact)",
+      "questions": [
+        "How do governments use cyber espionage for intelligence gathering?",
+        "What role does cyber espionage play in cyber warfare?",
+        "How do countries defend against state-sponsored cyber espionage?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Cyber Espionage Tools and Techniques (Hacking Methods)",
+      "questions": [
+        "What are Advanced Persistent Threats (APTs) in cyber espionage?",
+        "How do keyloggers and spyware contribute to cyber espionage?",
+        "What is social engineering, and how is it used in cyber espionage?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Cyber Espionage Prevention and Defense (Security Measures)",
+      "questions": [
+        "How can organizations protect themselves from cyber espionage?",
+        "What cybersecurity tools help prevent cyber espionage?",
+        "Why is employee training important in preventing cyber espionage?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Cyber Espionage and Legal Consequences (Laws & Policies)",
+      "questions": [
+        "What are the legal consequences of cyber espionage?",
+        "How do international laws address cyber espionage?",
+        "What Philippine laws cover cyber espionage and hacking?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Cyber Espionage in the Philippines (Local Threats & Challenges)",
+      "questions": [
+        "How common is cyber espionage in the Philippines?",
+        "Which sectors in the Philippines are most vulnerable to cyber espionage?",
+        "What government agencies in the Philippines handle cyber espionage cases?"
+      ]
+    }
+  ]
+}

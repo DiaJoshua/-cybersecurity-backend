@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "General Knowledge on Data Breaches",
+      "questions": [
+        "What is a data breach, and how does it happen?",
+        "What are the most common causes of data breaches?",
+        "Who is most at risk of a data breach?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Types of Data Breaches",
+      "questions": [
+        "What are the different types of data breaches?",
+        "What is a credential stuffing attack?",
+        "What is an insider threat, and how can it lead to a data breach?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "How Data is Stolen in a Breach",
+      "questions": [
+        "How do hackers steal personal and financial data?",
+        "What happens to stolen data after a breach?",
+        "How is personal information sold on the dark web?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "High-Profile Data Breaches",
+      "questions": [
+        "What are some of the biggest data breaches in history?",
+        "Has the Philippines experienced major data breaches?",
+        "What lessons can businesses learn from past data breaches?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Signs & Detection of a Data Breach",
+      "questions": [
+        "How can I tell if my personal data was exposed in a data breach?",
+        "What are the warning signs of a company experiencing a data breach?",
+        "How can businesses detect data breaches early?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Responding to a Data Breach",
+      "questions": [
+        "What should I do if my personal data was part of a data breach?",
+        "How do businesses respond to a data breach?",
+        "Can stolen data be recovered after a breach?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Preventing Data Breaches for Individuals",
+      "questions": [
+        "How can I protect my personal data from being stolen?",
+        "Why is it important to use strong, unique passwords?",
+        "How does Two-Factor Authentication (2FA) help prevent data breaches?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Preventing Data Breaches for Businesses",
+      "questions": [
+        "What security measures should businesses take to prevent data breaches?",
+        "Why is employee cybersecurity training important in preventing data breaches?",
+        "What role do encryption and firewalls play in data security?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Laws & Regulations on Data Breaches in the Philippines",
+      "questions": [
+        "What are the data privacy laws in the Philippines?",
+        "What penalties do companies face for failing to protect customer data?",
+        "Which government agencies handle data breaches in the Philippines?"
+      ]
+    }
+  ]
+}

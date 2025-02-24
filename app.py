@@ -1,36 +1,40 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
 import json
+import os
 
-app = Flask(__name__)
+# Configure Flask to serve static files from the "Chatbot" folder (inside Server)
+app = Flask(__name__, static_folder="Chatbot", static_url_path="/Chatbot")
 CORS(app, origins="http://localhost:5173")
 
-# Load fine-tuned GPT-2 model and tokenizer
+# Load your fine-tuned GPT-2 model and tokenizer
 model_name = "./Chatbot/fine_tuned_gpt2_2"
 model = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 model.eval()
 
-# Load the rules-based dataset from Server/Chatbot/chatbot_dataset.json
-with open("./Chatbot/chatbot_dataset.json", "r", encoding="utf-8") as file:
+# Load the rules-based dataset using a relative path from app.py (which is in Server)
+with open(os.path.join("Chatbot", "chatbot_dataset.json"), "r", encoding="utf-8") as file:
     rules_based_data = json.load(file)
 
+# Set a maximum number of words allowed in the input question
+MAX_INPUT_WORDS = 75
+
 def get_rules_based_response(question):
-    """Check if a predefined response exists for the given question."""
     lower_question = question.lower().strip()
-    # Loop through each key and return the answer if the question contains a keyword from the dataset.
-    for key in rules_based_data.keys():
-        if lower_question in key.lower():
-            return rules_based_data[key]
-    return None
+    return rules_based_data.get(lower_question, None)
+
 
 def generate_answer(question, model, tokenizer, max_length=512):
-    """Generate an AI response if no rules-based match is found."""
+    # Limit the question to MAX_INPUT_WORDS words
+    words = question.split()
+    if len(words) > MAX_INPUT_WORDS:
+        question = " ".join(words[:MAX_INPUT_WORDS])
+    
     input_text = f"Question: {question} Answer:"
     input_ids = tokenizer.encode(input_text, return_tensors='pt')
-
     output = model.generate(
         input_ids,
         max_length=max_length,
@@ -49,15 +53,21 @@ def chat():
     user_message = request.json.get("message")
     if not user_message:
         return jsonify({"response": "Sorry, I didn't catch that. Please try again."})
-
-    # Step 1: Check rules-based responses first
+    
+    # Check for a rules-based response first
     rules_response = get_rules_based_response(user_message)
     if rules_response:
         return jsonify({"response": rules_response})
-
-    # Step 2: Fallback to AI-generated response
+    
+    # Generate an AI response using the (possibly truncated) user_message
     ai_response = generate_answer(user_message, model, tokenizer)
-    return jsonify({"response": ai_response})
+    
+    # Ensure the response is valid
+    if ai_response and len(ai_response) > 5:
+        return jsonify({"response": ai_response})
+    
+    # Default fallback response if both fail
+    return jsonify({"response": "I'm sorry, but I couldn't find an answer to your question."})
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=3000)

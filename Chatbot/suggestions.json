@@ -1,0 +1,90 @@
+{
+  "Cyber Espionage": [
+    "Understanding Cyber Espionage (General Knowledge)",
+    "Methods Used in Cyber Espionage (Attack Techniques)",
+    "Cyber Espionage Targets (Who is at Risk?)",
+    "Notable Cyber Espionage Cases (Real-World Examples)",
+    "Cyber Espionage and National Security (Geopolitical Impact)",
+    "Cyber Espionage Tools and Techniques (Hacking Methods)",
+    "Cyber Espionage Prevention and Defense (Security Measures)",
+    "Cyber Espionage and Legal Consequences (Laws & Policies)",
+    "Cyber Espionage in the Philippines (Local Threats & Challenges)"
+  ],
+  "Cybercrime": [
+    "Understanding Cybercrime (General Knowledge)",
+    "Cyber Fraud & Financial Crimes (Online Scams & Fraudulent Activities)",
+    "Cyber Attacks & Hacking (Unauthorized Access & Data Breaches)",
+    "Cyberbullying & Online Harassment (Digital Safety & Social Media Crimes)",
+    "Child Exploitation & Online Abuse (Cybercrimes Against Minors)",
+    "Cyber Espionage & Data Theft (Corporate & Government Cybercrime)",
+    "Cybercrime Laws & Legal Actions (Philippine Cybercrime Regulations)",
+    "Online Privacy & Identity Theft (Digital Security & Data Protection)",
+    "Cybercrime Prevention & Awareness (Digital Safety Practices)"
+  ],
+  "Data Breach": [
+    "General Knowledge on Data Breaches",
+    "Types of Data Breaches",
+    "How Data is Stolen in a Breach",
+    "High-Profile Data Breaches",
+    "Signs & Detection of a Data Breach",
+    "Responding to a Data Breach",
+    "Preventing Data Breaches for Individuals",
+    "Preventing Data Breaches for Businesses",
+    "Laws & Regulations on Data Breaches in the Philippines"
+  ],
+  "DDoS Attack": [
+    "Understanding DDoS Attacks (General Knowledge)",
+    "Types of DDoS Attacks (Different Attack Methods)",
+    "Identifying a DDoS Attack (Spotting Red Flags)",
+    "DDoS Attack Prevention (How to Protect Systems)",
+    "DDoS Attack Mitigation (Stopping an Ongoing Attack)",
+    "Impact of DDoS Attacks (Consequences & Effects)",
+    "Legal Aspects of DDoS Attacks (Cybercrime Laws)",
+    "Notable DDoS Attacks (Real-World Cases)",
+    "Protecting Personal Devices from DDoS Attacks"
+  ],
+  "Financial Fraud": [
+    "Understanding Financial Fraud (General Knowledge)",
+    "Types of Financial Fraud (Different Fraud Schemes)",
+    "Banking & Online Payment Fraud (Scams Targeting Banks & E-Wallets)",
+    "Cyber Fraud & Digital Scams (Online & Digital Financial Crimes)",
+    "Business & Corporate Fraud (Fraud Affecting Companies & Employees)",
+    "Investment & Securities Fraud (Fake Investments & Trading Scams)",
+    "Loan & Insurance Fraud (Fake Loans & Fraudulent Claims)",
+    "Reporting & Legal Consequences (How to Take Action Against Fraud)",
+    "Financial Fraud Prevention & Security Tips (Protecting Yourself & Your Business)"
+  ],
+  "Hacking": [
+    "General Knowledge on Hacking",
+    "Common Hacking Techniques",
+    "Password & Account Hacking",
+    "Network & Wi-Fi Hacking",
+    "Mobile & Computer Hacking",
+    "Social Media & Email Hacking",
+    "Ethical Hacking & Cybersecurity Careers",
+    "Laws & Penalties for Hacking in the Philippines",
+    "Hacking Prevention & Cybersecurity Best Practices"
+  ],
+  "Identity Theft": [
+    "Understanding Identity Theft (General Knowledge)",
+    "How Identity Theft Happens (Methods Used by Criminals)",
+    "Online Identity Theft (Digital Risks & Scams)",
+    "Financial Identity Theft (Banking & Credit Fraud)",
+    "Government & Tax-Related Identity Theft",
+    "Identity Theft Warning Signs & Detection",
+    "Identity Theft Prevention (Protecting Personal Data)",
+    "Responding to Identity Theft (Recovery Steps & Reporting)",
+    "Legal & Law Enforcement Actions in the Philippines"
+  ],
+  "Ransomware": [
+    "Understanding Ransomware (General Knowledge)",
+    "How Ransomware Spreads (Infection Methods)",
+    "Notable Ransomware Attacks (Global & Local Cases)",
+    "How Ransomware Impacts Individuals & Businesses",
+    "Paying the Ransom (Should You or Not?)",
+    "Ransomware Prevention (How to Stay Safe)",
+    "Responding to a Ransomware Attack",
+    "Ransomware & Cybersecurity Laws in the Philippines",
+    "Future of Ransomware (Trends & Emerging Threats)"
+  ]
+}

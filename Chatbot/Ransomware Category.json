@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Understanding Ransomware (General Knowledge)",
+      "questions": [
+        "What is ransomware, and how does it work?",
+        "Why do cybercriminals use ransomware?",
+        "What are the most common types of ransomware?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "How Ransomware Spreads (Infection Methods)",
+      "questions": [
+        "How does ransomware infect a device?",
+        "Can ransomware spread through email attachments?",
+        "What are the signs that my device has been infected with ransomware?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Notable Ransomware Attacks (Global & Local Cases)",
+      "questions": [
+        "What are some of the biggest ransomware attacks in history?",
+        "Has the Philippines been affected by major ransomware attacks?",
+        "What industries are most at risk of ransomware attacks?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "How Ransomware Impacts Individuals & Businesses",
+      "questions": [
+        "How does ransomware affect individuals?",
+        "What are the financial consequences of a ransomware attack?",
+        "How can ransomware disrupt businesses and government agencies?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Paying the Ransom (Should You or Not?)",
+      "questions": [
+        "Should victims pay the ransom after a ransomware attack?",
+        "What happens if I don’t pay the ransom?",
+        "Can I get my files back without paying the ransom?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Ransomware Prevention (How to Stay Safe)",
+      "questions": [
+        "How can I protect my computer from ransomware?",
+        "What security measures help prevent ransomware attacks?",
+        "How can businesses reduce the risk of ransomware?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Responding to a Ransomware Attack",
+      "questions": [
+        "What should I do if my device is infected with ransomware?",
+        "Can ransomware be removed without losing files?",
+        "Who should I report a ransomware attack to in the Philippines?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Ransomware & Cybersecurity Laws in the Philippines",
+      "questions": [
+        "Are ransomware attacks illegal in the Philippines?",
+        "What are the penalties for launching a ransomware attack?",
+        "Which government agencies handle ransomware cases in the Philippines?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Future of Ransomware (Trends & Emerging Threats)",
+      "questions": [
+        "Is ransomware becoming more advanced?",
+        "What are the latest ransomware trends and techniques?",
+        "How will artificial intelligence impact ransomware attacks?"
+      ]
+    }
+  ]
+}

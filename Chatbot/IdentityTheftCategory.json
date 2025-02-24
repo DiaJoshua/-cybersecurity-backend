@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Understanding Identity Theft (General Knowledge)",
+      "questions": [
+        "What is identity theft, and how does it happen?",
+        "Why do cybercriminals steal identities?",
+        "What are the common types of identity theft?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "How Identity Theft Happens (Methods Used by Criminals)",
+      "questions": [
+        "How do criminals steal personal information?",
+        "What is phishing, and how does it lead to identity theft?",
+        "Can hackers steal my identity through public Wi-Fi?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Online Identity Theft (Digital Risks & Scams)",
+      "questions": [
+        "How can social media put me at risk of identity theft?",
+        "What are common online scams that lead to identity theft?",
+        "How do cybercriminals use stolen identities for fraud?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Financial Identity Theft (Banking & Credit Fraud)",
+      "questions": [
+        "How do criminals steal money using stolen identities?",
+        "What should I do if someone opens a loan or credit card in my name?",
+        "How can I protect my bank accounts from identity theft?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Government & Tax-Related Identity Theft",
+      "questions": [
+        "What is tax identity theft, and how does it happen?",
+        "How do scammers use fake IDs and government documents?",
+        "What should I do if someone uses my identity to commit a crime?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Identity Theft Warning Signs & Detection",
+      "questions": [
+        "How can I tell if someone is using my identity?",
+        "What are the warning signs of identity theft?",
+        "How often should I check my financial records for identity theft?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Identity Theft Prevention (Protecting Personal Data)",
+      "questions": [
+        "How can I protect my personal information from identity theft?",
+        "What are the best practices to secure my identity online?",
+        "How does two-factor authentication (2FA) help prevent identity theft?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Responding to Identity Theft (Recovery Steps & Reporting)",
+      "questions": [
+        "What should I do if I become a victim of identity theft?",
+        "How do I report identity theft in the Philippines?",
+        "Can I recover money lost due to identity theft?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Legal & Law Enforcement Actions in the Philippines",
+      "questions": [
+        "Is identity theft illegal in the Philippines?",
+        "What are the penalties for committing identity theft?",
+        "Which government agencies handle identity theft cases in the Philippines?"
+      ]
+    }
+  ]
+}

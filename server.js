@@ -24,6 +24,9 @@ app.use(cookieParser())
 app.use('/', express.static(path.join(__dirname, 'public')))
 app.use('/', require('./routes/root'))
 
+// Serve static files from the Server folder at the URL /Server
+app.use("/Server", express.static(path.join(__dirname, "Server")));
+
 const parser = new Parser()
 
 mongoose.connection.once('open', () => {

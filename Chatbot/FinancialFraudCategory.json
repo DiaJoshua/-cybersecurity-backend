@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Understanding Financial Fraud (General Knowledge)",
+      "questions": [
+        "What is financial fraud?",
+        "What are the most common types of financial fraud?",
+        "How does financial fraud impact individuals and businesses?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Types of Financial Fraud (Different Fraud Schemes)",
+      "questions": [
+        "What is identity theft in financial fraud?",
+        "How do Ponzi schemes and investment frauds work?",
+        "What is credit card fraud and how does it happen?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Banking & Online Payment Fraud (Scams Targeting Banks & E-Wallets)",
+      "questions": [
+        "How do fraudsters steal money from bank accounts?",
+        "What are common scams involving GCash, PayMaya, and online banking?",
+        "How can I protect my bank accounts from fraud?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Cyber Fraud & Digital Scams (Online & Digital Financial Crimes)",
+      "questions": [
+        "What is phishing and how does it lead to financial fraud?",
+        "How do scammers use social media for financial fraud?",
+        "What are common e-commerce fraud tactics in the Philippines?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Business & Corporate Fraud (Fraud Affecting Companies & Employees)",
+      "questions": [
+        "What is payroll fraud and how does it happen?",
+        "How do fraudsters commit business email compromise (BEC) scams?",
+        "What are insider threats in corporate financial fraud?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Investment & Securities Fraud (Fake Investments & Trading Scams)",
+      "questions": [
+        "What are common investment fraud schemes in the Philippines?",
+        "How do forex and cryptocurrency scams work?",
+        "What are red flags to watch out for in investment opportunities?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Loan & Insurance Fraud (Fake Loans & Fraudulent Claims)",
+      "questions": [
+        "What is loan fraud and how do scammers fake loan applications?",
+        "How does insurance fraud happen?",
+        "What should I do if I am a victim of loan fraud?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Reporting & Legal Consequences (How to Take Action Against Fraud)",
+      "questions": [
+        "How do I report financial fraud in the Philippines?",
+        "What Philippine laws cover financial fraud and scams?",
+        "What are the legal penalties for financial fraud in the Philippines?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Financial Fraud Prevention & Security Tips (Protecting Yourself & Your Business)",
+      "questions": [
+        "How can individuals protect themselves from financial fraud?",
+        "What security measures help businesses prevent financial fraud?",
+        "Why is financial literacy important in fraud prevention?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "General Knowledge on Hacking",
+      "questions": [
+        "What is hacking, and how does it work?",
+        "What are the different types of hackers?",
+        "Why do hackers attack individuals and businesses?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Common Hacking Techniques",
+      "questions": [
+        "What is phishing, and how do hackers use it?",
+        "What is malware, and how does it allow hackers to access systems?",
+        "How do hackers use social engineering to trick victims?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Password & Account Hacking",
+      "questions": [
+        "How do hackers steal passwords?",
+        "What are brute-force attacks, and how do they work?",
+        "How can I protect my online accounts from being hacked?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Network & Wi-Fi Hacking",
+      "questions": [
+        "Can hackers steal my data through public Wi-Fi?",
+        "What is a Man-in-the-Middle (MITM) attack?",
+        "How can I secure my home Wi-Fi from hackers?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Mobile & Computer Hacking",
+      "questions": [
+        "How do hackers gain access to mobile phones?",
+        "What are the signs that my phone or computer has been hacked?",
+        "What should I do if my device is hacked?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Social Media & Email Hacking",
+      "questions": [
+        "How do hackers take over Facebook, Instagram, or email accounts?",
+        "What should I do if my social media or email is hacked?",
+        "How can I prevent my accounts from being hacked?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Ethical Hacking & Cybersecurity Careers",
+      "questions": [
+        "What is ethical hacking, and how is it different from malicious hacking?",
+        "How do ethical hackers help businesses improve security?",
+        "What skills are needed to become a cybersecurity expert?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Laws & Penalties for Hacking in the Philippines",
+      "questions": [
+        "Is hacking illegal in the Philippines?",
+        "What are the penalties for hacking under Philippine law?",
+        "Which government agencies investigate hacking cases in the Philippines?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Hacking Prevention & Cybersecurity Best Practices",
+      "questions": [
+        "How can I protect myself from hackers?",
+        "What are the best cybersecurity practices for businesses?",
+        "Why is regular software updating important for security?"
+      ]
+    }
+  ]
+}

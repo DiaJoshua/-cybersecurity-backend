@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "title": "Understanding DDoS Attacks (General Knowledge)",
+      "questions": [
+        "What is a DDoS attack?",
+        "How does a DDoS attack work?",
+        "Why do hackers launch DDoS attacks?"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Types of DDoS Attacks (Different Attack Methods)",
+      "questions": [
+        "What are the different types of DDoS attacks?",
+        "What is a volumetric DDoS attack?",
+        "What is an application-layer DDoS attack?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Identifying a DDoS Attack (Spotting Red Flags)",
+      "questions": [
+        "How can I tell if my website or network is under a DDoS attack?",
+        "What are the signs of a DDoS attack?",
+        "How long does a DDoS attack last?"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "DDoS Attack Prevention (How to Protect Systems)",
+      "questions": [
+        "How can I prevent a DDoS attack on my website?",
+        "What security tools help prevent DDoS attacks?",
+        "Can a firewall stop a DDoS attack?"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "DDoS Attack Mitigation (Stopping an Ongoing Attack)",
+      "questions": [
+        "What should I do if my website is under a DDoS attack?",
+        "How do companies respond to DDoS attacks?",
+        "Can a DDoS attack be stopped in real-time?"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Impact of DDoS Attacks (Consequences & Effects)",
+      "questions": [
+        "What are the effects of a DDoS attack on businesses?",
+        "Can DDoS attacks cause financial losses?",
+        "How do DDoS attacks affect website performance?"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Legal Aspects of DDoS Attacks (Cybercrime Laws)",
+      "questions": [
+        "Are DDoS attacks illegal?",
+        "What are the penalties for launching a DDoS attack?",
+        "Can law enforcement track DDoS attackers?"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Notable DDoS Attacks (Real-World Cases)",
+      "questions": [
+        "What are some of the biggest DDoS attacks in history?",
+        "What was the Mirai botnet attack?",
+        "How do botnets contribute to DDoS attacks?"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Protecting Personal Devices from DDoS Attacks",
+      "questions": [
+        "Can my personal computer be used in a DDoS attack?",
+        "How can I protect my home network from DDoS attacks?",
+        "What should I do if my IP address is targeted in a DDoS attack?"
+      ]
+    }
+  ]
+}

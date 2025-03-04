@@ -1,9 +1,13 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from langdetect import detect, DetectorFactory
 import torch
 import json
 import os
+
+# Ensure consistent language detection results
+DetectorFactory.seed = 0  
 
 # Configure Flask to serve static files from the "Chatbot" folder (inside Server)
 app = Flask(__name__, static_folder="Chatbot", static_url_path="/Chatbot")
@@ -54,6 +58,16 @@ def chat():
     if not user_message:
         return jsonify({"response": "Sorry, I didn't catch that. Please try again."})
     
+
+        # Language detection before processing
+    try:
+        lang = detect(user_message)
+        if lang != "en":
+            return jsonify({"response": "❌ I'm only accepting English input."})
+    except:
+        return jsonify({"response": "❌ Unable to detect language. Please try again."})
+    
+    
     # Check for a rules-based response first
     rules_response = get_rules_based_response(user_message)
     if rules_response:
@@ -68,6 +82,31 @@ def chat():
     
     # Default fallback response if both fail
     return jsonify({"response": "I'm sorry, but I couldn't find an answer to your question."})
+
+@app.route('/detect_language', methods=['POST'])
+def detect_language():
+    """API endpoint for language detection"""
+    data = request.json
+    text = data.get("text", "").strip().lower()  # Normalize input
+
+    if not text:
+        return jsonify({"error": "Empty input"}), 400
+
+    # Allow common greetings
+    allowed_words = ["hi", "hello"]
+    if text in allowed_words:
+        return jsonify({"language": "en"})  # Treat as English
+    
+    # Force Tagalog detection for "ano ang ..."
+    if text.startswith("ano ang"):
+        return jsonify({"language": "tl"})  # Force it as Tagalog
+
+
+    try:
+        lang = detect(text)
+        return jsonify({"language": lang})
+    except:
+        return jsonify({"error": "Could not detect language"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=3000)

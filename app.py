@@ -93,7 +93,7 @@ def detect_language():
         return jsonify({"error": "Empty input"}), 400
 
     # Allow common greetings
-    allowed_words = ["hi", "hello"]
+    allowed_words = ["hi", "hello", "Do you know me?"]
     if text in allowed_words:
         return jsonify({"language": "en"})  # Treat as English
     
